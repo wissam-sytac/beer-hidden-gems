@@ -12,8 +12,8 @@ const Router = () => (
     <Menu>
       <Offline />
       <Routes>
-        <Route index element={<Home />} />
-        <Route path='beer'>
+        <Route path="/" element={<Home />} />
+        <Route path='/beer'>
           <Route index element={<BeerList />} />
           <Route path=':id' element={<Beer />} />
         </Route>
