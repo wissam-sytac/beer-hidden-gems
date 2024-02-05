@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/beer-hidden-gems/static/css/main.72d66d70.css",
-    "main.js": "/beer-hidden-gems/static/js/main.1699fb3e.js",
+    "main.js": "/beer-hidden-gems/static/js/main.b423fbba.js",
     "index.html": "/beer-hidden-gems/index.html",
     "main.72d66d70.css.map": "/beer-hidden-gems/static/css/main.72d66d70.css.map",
-    "main.1699fb3e.js.map": "/beer-hidden-gems/static/js/main.1699fb3e.js.map"
+    "main.b423fbba.js.map": "/beer-hidden-gems/static/js/main.b423fbba.js.map"
   },
   "entrypoints": [
     "static/css/main.72d66d70.css",
-    "static/js/main.1699fb3e.js"
+    "static/js/main.b423fbba.js"
   ]
 }
