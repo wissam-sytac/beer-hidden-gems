@@ -1,7 +1,7 @@
 {
   "name": "beer-hidden-gems",
   "version": "0.1.0",
-  "homepage": "https://wissam-sytac.github.io/beer-hidden-gems/",
+  "homepage": "https://wissam-sytac.github.io/beer-hidden-gems",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.0",
