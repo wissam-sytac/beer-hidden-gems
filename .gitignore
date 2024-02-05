@@ -1,0 +1,54 @@
+# Dependency directories
+/node_modules
+
+# Environment file
+/.env
+
+# Build files
+/build
+/dist
+/.next
+/out
+
+# Compiled output
+*.log
+*.pem
+*.pid
+*.raw
+*.tar
+*.gz
+*.zip
+*.rar
+*.tar.gz
+*.tgz
+*.bzip
+*.bzip2
+*.bz2
+*.rar
+*.7z
+*.exe
+*.dll
+*.iso
+*.img
+*.dmg
+*.xlsx
+*.pptx
+*.jar
+
+# IDE files
+/.idea
+/.vscode
+
+# Logs and databases
+*.log
+*.sqlite
+*.log.*
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
