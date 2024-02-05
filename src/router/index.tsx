@@ -8,12 +8,12 @@ import Footer from '../components/Footer';
 import Menu from '../components/Menu';
 
 const Router = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
     <Menu>
       <Offline />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='/beer'>
+        <Route index element={<Home />} />
+        <Route path='beer'>
           <Route index element={<BeerList />} />
           <Route path=':id' element={<Beer />} />
         </Route>

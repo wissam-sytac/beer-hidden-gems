@@ -9,7 +9,7 @@ jobs:
   deploy-react-to-gh-pages:
     runs-on: ubuntu-latest
     env:
-      REACT_APP_API: "/"
+      REACT_APP_API: "https://api.openbrewerydb.org/v1/"
 
     steps:
       - name: Checkout
