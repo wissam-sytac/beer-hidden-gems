@@ -1,15 +1,10 @@
-import { useEffect, useState } from "react";
-import { Beer as IBeer } from "../../../../shared/types";
-import { fetchData } from "./utils";
 import { useParams } from "react-router-dom";
-import { Layout } from "../../../../shared/components/Layout";
+import { Layout } from "../../shared/components/Layout";
+import { useFetchBeerByIdQuery } from "../../features/beers/redux/breweriesSlice";
 
 const Beer = () => {
-  const { id } = useParams();
-  const [beer, setBeer] = useState<IBeer>();
-
-  // eslint-disable-next-line
-  useEffect(fetchData.bind(this, setBeer, id), [id]);
+  const { id = "" } = useParams();
+  const { data: beer } = useFetchBeerByIdQuery(id);
 
   return (
     <Layout>

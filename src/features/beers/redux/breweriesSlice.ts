@@ -3,7 +3,7 @@ import { ApiParams, Beer } from "../../../shared/types";
 import type { BaseQueryFn } from "@reduxjs/toolkit/query";
 import axios from "axios";
 import type { AxiosRequestConfig, AxiosError } from "axios";
-import { API as API_BASE_URL } from "../../../api/config";
+import { API as API_BASE_URL } from "../../../config";
 interface ListResponse<T> {
   page: number;
   total: number;
@@ -34,7 +34,6 @@ const axiosBaseQuery =
         params,
         headers,
       });
-      console.log("axios request with params: ", params);
       return { data: result.data };
     } catch (axiosError) {
       const err = axiosError as AxiosError;
@@ -69,6 +68,13 @@ export const beersApi = createApi({
       },
     }),
 
+    fetchBeerById: builder.query<Beer, string>({
+      query: (id: string) => ({
+        url: `breweries/${id}`,
+        method: "get",
+      }),
+    }),
+
     randomBeers: builder.query<Beer[], ApiParams | void>({
       query: (params: ApiParams) => ({
         url: "breweries/random",
@@ -81,6 +87,6 @@ export const beersApi = createApi({
 
 export const {
   useListBeersQuery,
-  useRandomBeersQuery,
-  useLazyRandomBeersQuery,
+  useLazyRandomBeersQuery, // To avoid caching results we don't want that
+  useFetchBeerByIdQuery,
 } = beersApi;

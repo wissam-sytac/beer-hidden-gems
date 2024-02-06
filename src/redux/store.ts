@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { beersApi } from "../features/breweries/redux/breweriesSlice";
+import { beersApi } from "../features/beers/redux/breweriesSlice";
 import favoritesReducer from "../features/favorites/redux/favoritesSlice";
 import storage from "redux-persist/lib/storage";
 import {

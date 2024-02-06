@@ -1,15 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "../views/Home";
-import NotFound from "../views/404";
-import BeerList from "../features/breweries/pages/BeerList";
-import Beer from "../features/breweries/pages/Beer";
+import Home from "../pages/Home";
+import NotFound from "../pages/404";
+import Beer from "../pages/Beer";
+import Beers from "../pages/Beers";
 
 const Router = () => (
   <BrowserRouter basename={`/${process.env.PUBLIC_URL}`}>
     <Routes>
       <Route index element={<Home />} />
       <Route path="beer">
-        <Route index element={<BeerList />} />
+        <Route index element={<Beers />} />
         <Route path=":id" element={<Beer />} />
       </Route>
       <Route path="*" element={<NotFound />} />

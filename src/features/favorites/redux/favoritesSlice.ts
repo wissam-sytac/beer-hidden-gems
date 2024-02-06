@@ -1,7 +1,6 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AppDispatch, RootState } from "../../../redux/store";
 import { showToast } from "../../../redux/mainSlice";
-import { useSelector } from "react-redux";
 
 export interface Favorite {
   brewId: string;
@@ -48,24 +47,5 @@ const favoritesSlice = createSlice({
 });
 
 export const { add, remove, removeAll } = favoritesSlice.actions;
-
-export const saveFave =
-  (brewId: string, brewName: string) => async (dispatch: AppDispatch) => {
-    dispatch(add({ brewId, brewName }));
-    dispatch(showToast("Brewery successfully favorited"));
-  };
-
-export const deleteFave = (brewId: string) => async (dispatch: AppDispatch) => {
-  dispatch(remove(brewId));
-  dispatch(showToast("Brewery removed from favorite list"));
-};
-
-export const deleteAllFaves = () => async (dispatch: AppDispatch) => {
-  dispatch(removeAll());
-  dispatch(showToast("favorites cleared"));
-};
-
-export const favoritesAsAList = (state: RootState) =>
-  Object.values(state.favorites.data).filter((val) => val) as FavoriteRecord[];
 
 export default favoritesSlice.reducer;

@@ -1,6 +1,6 @@
 import { Alert, Snackbar } from "@mui/material";
 import Menu from "../Menu";
-import Offline from "../../../views/Offline";
+import Offline from "../../../pages/Offline";
 import Footer from "../Footer";
 import { useSelector } from "react-redux";
 import { RootState, useAppDispatch } from "../../../redux/store";

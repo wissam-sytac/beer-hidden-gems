@@ -25,7 +25,7 @@ export const BeerListItem = ({
         </Avatar>
       </ListItemAvatar>
       <ListItemText primary={beer.name} secondary={beer.brewery_type} />
-      <Button onClick={onClickExplore(beer.id)}>explore</Button>
+      <Button onClick={onClickExplore(beer.id)}>see details</Button>
       <Button
         onClick={onClickAddToFaves(beer)}
         variant={isFavorited ? "outlined" : "contained"}
