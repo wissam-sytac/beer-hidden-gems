@@ -1,4 +1,4 @@
-import { TYPE, SORT } from './';
+import { TYPE, SORT } from "./index";
 
 interface ApiParams {
   per_page?: number; // Int between 1 and 200. Default is 50.
@@ -11,6 +11,8 @@ interface ApiParams {
   by_postal?: number | string; // 5-digit, or 9-digit with underscore
   by_country?: string;
   by_type?: TYPE;
+  size?: number; // <-- required for random fetch endpoint
+  random?: string;
 }
 
 export type { ApiParams };

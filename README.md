@@ -5,7 +5,8 @@ We will discuss the proposed solution during the interview. You should be ready 
 
 ## Recruitment Task
 
-- Beer page ~ style a cool beer page (Mandatory)
-- Home page favourites ~ add a list of favourite beers, do not clean after page reload  (Mandatory)
-- Beer list filtering + pagination + sorting (Mandatory)
-- Progressive Web App, offline (Non Mandatory)
+- [ ] Beer page ~ style a cool beer page (Mandatory)
+- [x] Home page favourites ~ add a list of favourite beers, do not clean after page reload  (Mandatory)
+- [x] Home page favourites ~ add a list of favourite beers, do not clean after page reload  (Mandatory)
+- [x] Beer list filtering + pagination + sorting (Mandatory)
+- [ ] Progressive Web App, offline (Non Mandatory)

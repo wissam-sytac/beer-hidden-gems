@@ -1,6 +1,6 @@
 import { getRandomBeerList } from '../../api';
-import { Beer } from '../../types';
-import handle from '../../utils/error';
+import { Beer } from '../../shared/types';
+import handle from '../../shared/utils/error';
 
 const fetchData = (setData: (data: Array<Beer>) => void) => {
   (async () => {

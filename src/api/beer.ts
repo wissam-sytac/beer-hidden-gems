@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { API } from './config';
-import { ApiParams } from '../types';
+import { ApiParams } from '../shared/types';
 
 const getBeer = (id: string) => axios.get(`${API}breweries/${id}`);
 
