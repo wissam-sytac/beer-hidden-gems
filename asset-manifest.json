@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/beer-hidden-gems/static/css/main.72d66d70.css",
-    "main.js": "/beer-hidden-gems/static/js/main.b423fbba.js",
+    "main.css": "/beer-hidden-gems/static/css/main.99780f19.css",
+    "main.js": "/beer-hidden-gems/static/js/main.2abcc0fa.js",
+    "static/js/652.c992bdca.chunk.js": "/beer-hidden-gems/static/js/652.c992bdca.chunk.js",
+    "static/js/827.81107629.chunk.js": "/beer-hidden-gems/static/js/827.81107629.chunk.js",
     "index.html": "/beer-hidden-gems/index.html",
-    "main.72d66d70.css.map": "/beer-hidden-gems/static/css/main.72d66d70.css.map",
-    "main.b423fbba.js.map": "/beer-hidden-gems/static/js/main.b423fbba.js.map"
+    "main.99780f19.css.map": "/beer-hidden-gems/static/css/main.99780f19.css.map",
+    "main.2abcc0fa.js.map": "/beer-hidden-gems/static/js/main.2abcc0fa.js.map",
+    "652.c992bdca.chunk.js.map": "/beer-hidden-gems/static/js/652.c992bdca.chunk.js.map",
+    "827.81107629.chunk.js.map": "/beer-hidden-gems/static/js/827.81107629.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.72d66d70.css",
-    "static/js/main.b423fbba.js"
+    "static/css/main.99780f19.css",
+    "static/js/main.2abcc0fa.js"
   ]
 }
