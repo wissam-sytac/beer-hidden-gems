@@ -4,7 +4,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import React, { useState } from "react";
 import { ApiParams, SORT, TYPE } from "../../../shared/types";
-import { TextField } from "@mui/material";
+import { Button, TextField } from "@mui/material";
 
 interface BeerFiltersProps {
   filterValues: ApiParams;
@@ -82,7 +82,7 @@ export const BeerFilters = ({
       <FormControl>
         <TextField
           id="outlined-basic"
-          label="search by name"
+          label="name (min 3 chars)"
           variant="outlined"
           value={filterValues.by_name}
           onChange={handleChangeName}

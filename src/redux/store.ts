@@ -15,9 +15,10 @@ import {
 import mainReducer from "./mainSlice";
 import { thunk } from "redux-thunk";
 import { useDispatch } from "react-redux";
+import { LOCAL_STORAGE_KEY_FAVES } from "../config";
 
 const persistConfig = {
-  key: "beer-hidden-gems",
+  key: LOCAL_STORAGE_KEY_FAVES,
   storage,
 };
 

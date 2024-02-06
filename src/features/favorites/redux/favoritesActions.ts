@@ -17,3 +17,12 @@ export const deleteAllFaves = () => async (dispatch: AppDispatch) => {
   dispatch(removeAll());
   dispatch(showToast("favorites cleared"));
 };
+
+export const deleteFavesByIds =
+  (brews: string[] = []) =>
+  async (dispatch: AppDispatch) => {
+    for (let i = 0; i < brews.length; i++) {
+      dispatch(remove(brews[i]));
+    }
+    dispatch(showToast("selection deleted"));
+  };

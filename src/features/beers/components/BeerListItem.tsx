@@ -1,8 +1,11 @@
 import { Avatar, Button, ListItemAvatar, ListItemText } from "@mui/material";
 import SportsBar from "@mui/icons-material/SportsBar";
+import DeleteIcon from "@mui/icons-material/Delete";
+import AddIcon from "@mui/icons-material/Add";
 import ListItem from "@mui/material/ListItem";
 import React from "react";
 import { Beer } from "../../../shared/types";
+import Divider from "@mui/material/Divider";
 
 interface BeerListProps {
   beer: Beer;
@@ -18,20 +21,30 @@ export const BeerListItem = ({
   onClickExplore,
 }: BeerListProps) => {
   return (
-    <ListItem alignItems="flex-start">
-      <ListItemAvatar>
-        <Avatar>
-          <SportsBar />
-        </Avatar>
-      </ListItemAvatar>
-      <ListItemText primary={beer.name} secondary={beer.brewery_type} />
-      <Button onClick={onClickExplore(beer.id)}>see details</Button>
-      <Button
-        onClick={onClickAddToFaves(beer)}
-        variant={isFavorited ? "outlined" : "contained"}
-      >
-        {isFavorited ? "remove from faves" : "add to faves"}
-      </Button>
-    </ListItem>
+    <>
+      <ListItem alignItems="flex-start">
+        <ListItemAvatar>
+          <Avatar>
+            <SportsBar />
+          </Avatar>
+        </ListItemAvatar>
+        <ListItemText primary={beer.name} secondary={beer.brewery_type} />
+        <Button
+          onClick={onClickExplore(beer.id)}
+          data-testid="btn-click-details"
+        >
+          see details
+        </Button>
+        <Button
+          onClick={onClickAddToFaves(beer)}
+          variant={isFavorited ? "outlined" : "contained"}
+          startIcon={isFavorited ? <DeleteIcon /> : <AddIcon />}
+          data-testid="btn-click-add"
+        >
+          {isFavorited ? "forget" : "save"}
+        </Button>
+      </ListItem>
+      <Divider />
+    </>
   );
 };

@@ -13,7 +13,6 @@ const Home = () => {
             <Paper>
               <RandomizedBeerList />
             </Paper>
-
             <Paper>
               <FavoritesList />
             </Paper>

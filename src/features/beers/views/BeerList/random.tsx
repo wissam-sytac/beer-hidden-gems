@@ -1,6 +1,6 @@
 import styles from "../../../../pages/Home/Home.module.css";
-import { Button } from "@mui/material";
-import Divider from "@mui/material/Divider";
+import { Alert, Button } from "@mui/material";
+import RefreshIcon from "@mui/icons-material/Refresh";
 import { useNavigate } from "react-router-dom";
 import React, { useEffect } from "react";
 import { useLazyRandomBeersQuery } from "../../redux/breweriesSlice";
@@ -12,11 +12,12 @@ import {
   saveFave,
 } from "../../../favorites/redux/favoritesActions";
 import { useSelector } from "react-redux";
+import { LoadingSpinner } from "../../../../shared/components/LoadingSpinner";
 
 export const RandomizedBeerList = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
-  const [trigger, { data }] = useLazyRandomBeersQuery();
+  const [trigger, { data, error, isLoading }] = useLazyRandomBeersQuery();
   const triggerRandomData = () => {
     trigger({ page: 1, size: 5, random: new Date().toISOString() });
   };
@@ -48,22 +49,32 @@ export const RandomizedBeerList = () => {
     <div className={styles.listContainer}>
       <div className={styles.listHeader}>
         <h3>Suggestions</h3>
-        <Button variant="contained" onClick={handleClickReload}>
+        <Button
+          variant="outlined"
+          onClick={handleClickReload}
+          startIcon={<RefreshIcon />}
+        >
           Reload list
         </Button>
       </div>
       <ul className={styles.list}>
-        {data?.map((beer, index) => (
-          <>
+        <>
+          {isLoading && <LoadingSpinner />}
+          {error && (
+            <Alert variant="filled" severity="error">
+              error
+            </Alert>
+          )}
+          {data?.map((beer, index) => (
             <BeerListItem
               beer={beer}
+              key={beer.id}
               isFavorited={!!favorites[beer.id]}
               onClickExplore={handleClickExplore}
               onClickAddToFaves={handleClickAddToFavorites}
             />
-            <Divider />
-          </>
-        ))}
+          ))}
+        </>
       </ul>
     </div>
   );

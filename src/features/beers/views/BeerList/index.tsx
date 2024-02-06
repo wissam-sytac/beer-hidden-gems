@@ -69,9 +69,7 @@ const BeerList = () => {
       </Alert>
     );
 
-  return isLoading ? (
-    <LoadingSpinner />
-  ) : (
+  return (
     <>
       <Box sx={{ minWidth: 200 }}>
         <BeerFilters
@@ -80,15 +78,23 @@ const BeerList = () => {
         />
       </Box>
       <List sx={{ width: "100%", bgcolor: "background.paper" }}>
-        {beers?.data.map((beer) => (
-          <BeerListItem
-            key={beer.id}
-            beer={beer}
-            isFavorited={!!favorites[beer.id]}
-            onClickExplore={handleClickExplore}
-            onClickAddToFaves={handleClickAddToFavorites}
-          />
-        ))}
+        <>
+          {isLoading && <LoadingSpinner />}
+          {error && (
+            <Alert variant="filled" severity="error">
+              error
+            </Alert>
+          )}
+          {beers?.data.map((beer) => (
+            <BeerListItem
+              key={beer.id}
+              beer={beer}
+              isFavorited={!!favorites[beer.id]}
+              onClickExplore={handleClickExplore}
+              onClickAddToFaves={handleClickAddToFavorites}
+            />
+          ))}
+        </>
       </List>
       <Pagination
         count={beers?.total_pages}
