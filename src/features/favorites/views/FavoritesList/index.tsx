@@ -1,4 +1,4 @@
-import styles from "../../../../pages/Home/Home.module.css";
+import styles from "./FavoritesList.module.css";
 import { Button, Checkbox } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import React, { useEffect, useState } from "react";

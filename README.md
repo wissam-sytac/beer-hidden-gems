@@ -15,6 +15,7 @@ Explore brewery data available through OpenBreweryDb API, and save your favorite
 - State management: Redux simplifies the state logic and the flow of actions
 - Persist middleware to persist the favorites to localStorage
 - filter by name is triggered currently on character change. (ideally this is debounced or trigger filter manually via button)
+- deployment done one push to branch main via Github actions
 
 <img width="1300" alt="Scherm­afbeelding 2024-02-06 om 13 40 06" src="https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/95520c0e-5943-4073-96ed-701a27560026">
 
@@ -30,6 +31,7 @@ Explore brewery data available through OpenBreweryDb API, and save your favorite
 - Fix toast message issue for multiple notifications
 - improve test coverage (current testing is for components within the beers feature)
 - build better beer page (by id)
+- add are you sure? message for remove all favorites
 
 ## Local development
 

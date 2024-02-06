@@ -1,4 +1,4 @@
-import styles from "../../../../pages/Home/Home.module.css";
+import styles from "./BeerList.module.css";
 import { Alert, Button } from "@mui/material";
 import RefreshIcon from "@mui/icons-material/Refresh";
 import { useNavigate } from "react-router-dom";

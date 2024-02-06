@@ -29,6 +29,7 @@ export const BeerListItem = ({
           </Avatar>
         </ListItemAvatar>
         <ListItemText primary={beer.name} secondary={beer.brewery_type} />
+
         <Button
           onClick={onClickExplore(beer.id)}
           data-testid="btn-click-details"
