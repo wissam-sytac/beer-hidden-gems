@@ -8,15 +8,15 @@ Explore brewery data available through OpenBreweryDb API, and save your favorite
 - [x] Home page favourites ~ add a list of favourite beers, do not clean after page reload  (Mandatory)
 - [x] Beer list filtering + pagination + sorting (Mandatory)
 - [ ] Progressive Web App, offline (Non Mandatory)
-
-![Schermopname2024-02-06om13 43 40-ezgif com-video-to-gif-converter (1)](https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/e4f46399-d790-4980-9556-fb3969f05d35)
-
 ![Schermopname2024-02-06om13 43 40-ezgif com-video-to-gif-converter](https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/70a00a4f-420a-47a2-acb3-733b1765b486)
+![Schermopname2024-02-06om13 43 40-ezgif com-video-to-gif-converter (1)](https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/e4f46399-d790-4980-9556-fb3969f05d35)
 
 ## Technicals
 - State management: Redux simplifies the state logic and the flow of actions
 - Persist middleware to persist the favorites to localStorage
 - filter by name is triggered currently on character change. (ideally this is debounced or trigger filter manually via button)
+
+<img width="1300" alt="Scherm­afbeelding 2024-02-06 om 13 40 06" src="https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/95520c0e-5943-4073-96ed-701a27560026">
 
 ## Known issues
 - Not all filters are implemented due to time constraints
