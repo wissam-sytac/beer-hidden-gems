@@ -25,6 +25,12 @@ Explore brewery data available through OpenBreweryDb API, and save your favorite
 - Local mocks server not loading properly (cause: paths for react-script set via homepage in package.json to accommodate deployment to Github pages)
 - Error messages will need to be handled better
 
+## Future work
+- Improve pagination
+- Fix toast message issue for multiple notifications
+- improve test coverage (current testing is for components within the beers feature)
+- build better beer page (by id)
+
 ## Local development
 
 ```

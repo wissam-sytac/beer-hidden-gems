@@ -39,6 +39,7 @@ export const FavoritesList = () => {
 
   const handleRemoveSelected = (event: React.ChangeEvent<unknown>) => {
     dispatch(deleteFavesByIds(selected));
+    setSelected([]);
   };
 
   return (
