@@ -1,6 +1,5 @@
 # Hidden Gem Beers
 Accessible on: https://wissam-sytac.github.io/beer-hidden-gems
-
 Explore brewery data available through OpenBreweryDb API, and save your favorite breweries!
 
 ## Requirements
@@ -9,6 +8,10 @@ Explore brewery data available through OpenBreweryDb API, and save your favorite
 - [x] Home page favourites ~ add a list of favourite beers, do not clean after page reload  (Mandatory)
 - [x] Beer list filtering + pagination + sorting (Mandatory)
 - [ ] Progressive Web App, offline (Non Mandatory)
+
+![Schermopname2024-02-06om13 43 40-ezgif com-video-to-gif-converter (1)](https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/e4f46399-d790-4980-9556-fb3969f05d35)
+
+![Schermopname2024-02-06om13 43 40-ezgif com-video-to-gif-converter](https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/70a00a4f-420a-47a2-acb3-733b1765b486)
 
 ## Technicals
 - State management: Redux simplifies the state logic and the flow of actions
