@@ -9,7 +9,7 @@ export interface FavoriteRecord extends Favorite {
   createdOn: string;
 }
 
-interface FavoritesState {
+export interface FavoritesState {
   data: Record<string, FavoriteRecord | undefined>;
 }
 
@@ -27,7 +27,7 @@ const favoritesSlice = createSlice({
         [action.payload.brewId]: {
           brewId: action.payload.brewId,
           brewName: action.payload.brewName,
-          createdOn: new Date().toDateString(),
+          createdOn: new Date().toISOString(),
         },
       };
     },
