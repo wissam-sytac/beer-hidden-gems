@@ -6,10 +6,12 @@ export interface Toast {
 }
 
 interface MainState {
+  isOnline: boolean;
   toast: Toast;
 }
 
 const initialState: MainState = {
+  isOnline: navigator.onLine,
   toast: {
     isVisible: false,
     message: "yes",
@@ -33,9 +35,12 @@ const mainSlice = createSlice({
         message: "",
       };
     },
+    updateOnlineStatus: (state, action: PayloadAction<boolean>) => {
+      state.isOnline = action.payload;
+    },
   },
 });
 
 export default mainSlice.reducer;
 
-export const { showToast, hideToast } = mainSlice.actions;
+export const { showToast, hideToast, updateOnlineStatus } = mainSlice.actions;

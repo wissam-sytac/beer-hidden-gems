@@ -12,7 +12,7 @@ import {
   PURGE,
   REGISTER,
 } from "redux-persist";
-import mainReducer from "./mainSlice";
+import mainReducer from "../shared/redux/mainSlice";
 import { thunk } from "redux-thunk";
 import { useDispatch } from "react-redux";
 import { LOCAL_STORAGE_KEY_FAVES } from "../config";

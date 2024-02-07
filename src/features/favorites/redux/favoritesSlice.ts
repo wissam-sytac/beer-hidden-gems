@@ -1,6 +1,4 @@
-import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AppDispatch, RootState } from "../../../redux/store";
-import { showToast } from "../../../redux/mainSlice";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface Favorite {
   brewId: string;

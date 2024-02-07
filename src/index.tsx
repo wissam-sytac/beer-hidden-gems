@@ -9,6 +9,7 @@ import store, { persistor } from "./redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import "./shared/styles/global.css";
 
+// Currently not working properly (path to msw service worker needs fixed)
 async function enableMocking() {
   if (process.env.REACT_APP_MSW !== "true") {
     return;

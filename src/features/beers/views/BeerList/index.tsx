@@ -59,6 +59,7 @@ const BeerList = () => {
     setFilters({
       ...filters,
       ...selection,
+      page: 1, // <-- reset to page 1 if filter selection changes
     });
   };
 

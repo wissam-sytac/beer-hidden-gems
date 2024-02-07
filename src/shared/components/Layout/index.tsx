@@ -4,7 +4,7 @@ import Offline from "../../../pages/Offline";
 import Footer from "../Footer";
 import { useSelector } from "react-redux";
 import { RootState, useAppDispatch } from "../../../redux/store";
-import { hideToast } from "../../../redux/mainSlice";
+import { hideToast } from "../../redux/mainSlice";
 
 export interface LayoutProps {
   children?: React.ReactNode;

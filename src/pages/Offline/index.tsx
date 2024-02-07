@@ -1,32 +1,29 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from "react";
+import { Alert } from "@mui/material";
+import { useSelector } from "react-redux";
+import { selectOnlineStatus } from "../../shared/redux/mainSelectors";
+import { useAppDispatch } from "../../redux/store";
+import { updateOnlineStatus } from "../../shared/redux/mainSlice";
 
 const Offline = () => {
-  const [isOnline, setIsOnline] = useState(true);
-
-  const setOnline = () => setIsOnline(true);
-  const setOffline = () => setIsOnline(false);
+  const dispatch = useAppDispatch();
+  const isOnline = useSelector(selectOnlineStatus);
 
   useEffect(() => {
-    window.addEventListener('online', setOnline);
-    window.addEventListener('offline', setOffline);
-
     return () => {
-      window.addEventListener('online', setOnline);
-      window.addEventListener('offline', setOffline);
+      window.addEventListener("online", () =>
+        dispatch(updateOnlineStatus(true)),
+      );
+      window.addEventListener("offline", () =>
+        dispatch(updateOnlineStatus(false)),
+      );
     };
-  }, []);
+  }, [dispatch]);
 
   return isOnline ? null : (
-    <article>
-      <section>
-        <header>
-          <h1>You are offline</h1>
-        </header>
-        <main>
-          <span>App needs internet to start working</span>
-        </main>
-      </section>
-    </article>
+    <Alert variant="filled" severity="warning">
+      You are offline. Connect to the internet for optimal experience.
+    </Alert>
   );
 };
 

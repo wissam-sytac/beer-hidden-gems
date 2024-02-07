@@ -1,5 +1,5 @@
 import { AppDispatch } from "../../../redux/store";
-import { showToast } from "../../../redux/mainSlice";
+import { showToast } from "../../../shared/redux/mainSlice";
 import { add, remove, removeAll } from "./favoritesSlice";
 
 export const saveFave =
