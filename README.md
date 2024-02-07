@@ -1,6 +1,6 @@
 # Hidden Gem Beers
 
-![logo](https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/dd6fce13-1bd3-4f6e-82f0-5f2a3acc8f4e)
+<img src="https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/dd6fce13-1bd3-4f6e-82f0-5f2a3acc8f4e" width="200">
 
 Accessible on: https://wissam-sytac.github.io/beer-hidden-gems
 
@@ -13,12 +13,12 @@ Explore brewery data available through OpenBreweryDb API, and save your favorite
 - [x] Beer list filtering + pagination + sorting (Mandatory)
 - [ ] Progressive Web App, offline (Non Mandatory)
 - [x] Offline detection
-      
-![Schermopname2024-02-06om13 43 40-ezgif com-video-to-gif-converter](https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/70a00a4f-420a-47a2-acb3-733b1765b486)
 
-<img width="963" alt="Scherm­afbeelding 2024-02-07 om 05 21 49" src="https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/b3a2d0b8-4a3c-4105-ac04-5003ec34d7c0">
+<img src="https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/70a00a4f-420a-47a2-acb3-733b1765b486" width="520">
 
-![Schermopname2024-02-06om13 43 40-ezgif com-video-to-gif-converter (1)](https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/e4f46399-d790-4980-9556-fb3969f05d35)
+<img width="520" src="https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/e4f46399-d790-4980-9556-fb3969f05d35">
+
+<img src="https://github.com/wissam-sytac/beer-hidden-gems/assets/42930136/b3a2d0b8-4a3c-4105-ac04-5003ec34d7c0" width="520">
 
 ## Technicals
 - State management: Redux simplifies the state logic and the flow of actions
